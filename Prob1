@@ -1,0 +1,22 @@
+o = 10;
+for n = 0:1:99
+    %1st conditon
+    if n <= 9
+        stem(n, ((n^2)-7));
+        hold on;
+    else
+        i = 1;
+        m = n;
+        %2nd condition
+        while i == 1
+            m = m - 10;
+            if m < 10
+            stem(m + o, ((m^2)-7));
+            hold on;
+            i = 0;
+            end
+            o = o + 10;
+        end
+        o = 10;
+    end
+end
