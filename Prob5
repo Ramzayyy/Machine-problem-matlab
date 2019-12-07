@@ -1,0 +1,22 @@
+n=0:1:199;
+N=input('Put a function of x(n): ');
+plot(n,N,'b');
+hold on;
+%1st condition
+    y=-1.5.*(N(1))+2.*(N(2))-0.5.*(N(3));
+    fprintf('%.2f ', y);
+    fprintf('\n')
+        plot(0,y,'.r');
+        hold on;
+        %2nd condition
+for index = 2:199
+    y=0.5.*(N(index+1))-0.5.*(N(index-1));
+        plot(index-1,y,'.r');
+        hold on;
+end
+%3rd condition
+    y=1.5.*(N(200))-2.*(N(199))+0.5.*(N(198));
+    fprintf('%.2f ', y);
+    fprintf('\n')
+        plot(200,y,'.r')
+        hold on;
