@@ -1,0 +1,13 @@
+a=input('Input points')
+b=input('Input points')
+c=input('Input points')
+syms h k
+%simplyfy the polynomials
+x=conv((a(1,1)-h)^2)-((b(1,1)-h)^2)-conv((a(1,2)-k)^2)-((b(1,2)-k)^2)
+y=conv((a(1,1)-h)^2)-((c(1,1)-h)^2)-conv((a(1,2)-k)^2)-((c(1,2)-k)^2)
+%rref method to get h and k
+rref(x,y)
+%get radius
+r = sqrt(a(1,1)-h)^2 + ((a(1,2)-k)^2)
+%get vectors
+x^2 + y^2 + Dx + Ey + F == 0
